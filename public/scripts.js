@@ -6,8 +6,8 @@ $(function(){
             url: '/users/getusers',
             success:(response) => {
                 response.users.forEach((user) => {
-                    $('#sender').append('\<option value = ' + user.id + '>' + user.username + '</option>');
-                    $('#receiver').append('\<option value = ' + user.id + '>' + user.username + '</option>')
+                    $('#sender').append('\<option value = ' + user._id + '>' + user.username + '</option>');
+                    $('#receiver').append('\<option value = ' + user._id + '>' + user.username + '</option>')
                 });
             }
         })

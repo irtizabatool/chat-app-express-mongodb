@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGOURI = "mongodb://localhost:27017/ChatApp";
+const MONGOURI = "mongodb://localhost:27017/chatapp";
 
 const connectMongo = mongoose.connect(MONGOURI,
     { useNewUrlParser: true,
