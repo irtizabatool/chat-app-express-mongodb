@@ -28,12 +28,12 @@ $(function(){
                 },
                 success: (response) => {
                     response.users.forEach((user) => {
-                    if(user.leftuser === sender.val()){
+                    if(user.sender === sender.val()){
                         $('#messages').append('\<p style="text-align:left">' + user.message +'<p>')
                     }else{
                         $('#messages').append('\<p style="text-align:right">' + user.message +'<p>')
                     }
-                    console.log(user.leftuser);
+                    console.log(user.sender);
                     })
                 }
             });
@@ -55,12 +55,12 @@ $(function(){
                 },
                 success: (response) => {
                     response.users.forEach((user) => {
-                    if(user.leftuser === sender.val()){
+                    if(user.sender === sender.val()){
                         $('#messages').append('\<p style="text-align:left">' + user.message +'<p>')
                     }else{
                         $('#messages').append('\<p style="text-align:right">' + user.message +'<p>')
                     }
-                    console.log(user.leftuser);
+                    console.log(user.sender);
                     })
                 }
             });
@@ -83,7 +83,6 @@ $(function(){
                 message: message1.val(),
             }),
             success: function(response){
-                console.log(response);
                 message1.val('');
                 $('#sender').change();
             } 
@@ -110,7 +109,6 @@ $(function(){
                 message: message2.val()
             }),
             success: function(response){
-                console.log(response);
                 message2.val('');
                 $('#sender').change();
             } 
